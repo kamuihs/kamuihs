@@ -1,130 +1,124 @@
-<div align="center">
+# 👨‍💻 Caio Gabriel Freitas Savazi
 
-
-██████╗ █████╗ ██╗ ██████╗ ██████╗ █████╗ ██████╗ ██████╗ ██╗███████╗██╗
-██╔════╝██╔══██╗██║██╔═══██╗ ██╔════╝ ██╔══██╗██╔══██╗██╔══██╗██║██╔════╝██║
-██║ ███████║██║██║ ██║ ██║ ███╗███████║██████╔╝██████╔╝██║█████╗ ██║
-██║ ██╔══██║██║██║ ██║ ██║ ██║██╔══██║██╔══██╗██╔══██╗██║██╔══╝ ██║
-╚██████╗██║ ██║██║╚██████╔╝ ╚██████╔╝██║ ██║██████╔╝██║ ██║██║███████╗███████╗
-╚═════╝╚═╝ ╚═╝╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═╝╚═════╝ ╚═╝ ╚═╝╚═╝╚══════╝╚══════╝
-
-
-### Caio Gabriel Freitas Savazi  
 **Coordenador de TI · Segurança da Informação · Defesa Cibernética**
 
-📍 Campo Limpo Paulista, SP — Brasil  
-🎓 CST Defesa Cibernética — FATEC Jundiaí  
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Caio_Savazi-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/caio-gabriel-freitas-savazi-5b16a72a8)
-[![Email](https://img.shields.io/badge/Email-caiogabrielsavazi@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:caiogabrielsavazi@gmail.com)
-[![AWS](https://img.shields.io/badge/AWS-Cloud_Foundations-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com)
-
-![Status](https://img.shields.io/badge/🟢_Status-Disponível_para_contratação-238636?style=flat-square)
-![Local](https://img.shields.io/badge/📍_Local-Campo_Limpo_Paulista,_SP-30363d?style=flat-square)
-
-</div>
+📍 Campo Limpo Paulista, SP - Brasil  
+🎓 CST Defesa Cibernética - FATEC Jundiaí  
+✉ caio-savazi@sec-ops  
+🔗 [LinkedIn](https://linkedin.com/in/caio-savazi)
 
 ---
 
-## 👤 Sobre mim
+## $ WHOAMI
 
-Profissional de **Tecnologia da Informação**, comunicativo e disciplinado, com forte atuação em **infraestrutura de TI, ambientes Windows e suporte técnico** no setor público.
+Coordenador de TI - Segurança da Informação - Defesa Cibernética  
++2 anos em infraestrutura no setor público · FATEC Jundiaí · Campo Limpo Paulista, SP  
 
-Atualmente atuo como **Coordenador de TI** na Secretaria de Saúde de Campo Limpo Paulista e curso **Defesa Cibernética** na FATEC Jundiaí, com foco em evolução contínua para **Segurança da Informação**.
-
-> 💡 Sei como redes funcionam — e como podem ser comprometidas.
-
----
-
-## 💼 Experiência
-
-**Coordenador de TI**  
-Secretaria de Saúde de Campo Limpo Paulista — *abr/2025 · atual*  
-- Gestão de infraestrutura e ativos de TI  
-- Supervisão de sistemas e suporte técnico  
-- Organização de ambientes críticos  
-
-**Responsável por Infraestrutura de TI**  
-Prefeitura Municipal de Campo Limpo Paulista — *ago/2023 · ago/2025*  
-- Configuração de redes, switches e Wi-Fi  
-- Suporte técnico remoto e presencial  
-- Monitoramento e manutenção de máquinas  
-
-**Professor de Informática Administrativa**  
-Evolutime (Freelance) — *jan/2024 · ago/2025*  
-- Elaboração de conteúdo programático  
-- Aulas teóricas e práticas  
-- Orientação profissional e soft skills  
+Disponível para contratação ✅  
+AWS Certified ☑  
 
 ---
 
-## 🛠️ Habilidades
+## $ sobre_mim.txt
 
-**Segurança & Infraestrutura**
-- Windows Server · Active Directory  
-- Redes TCP/IP (cabeada e Wi-Fi)  
-- Switches e Roteadores  
-- Suporte Técnico  
-
-**Cloud & Plataformas**
-- AWS Cloud Foundations  
-- Linux · Kali Linux  
-
-**Automação & Ferramentas**
-- Python · Bash  
-- Git · Microsoft Office  
-
-**Em estudo**
-- Defesa Cibernética  
-- OWASP Top 10  
-- Metasploit · Nmap  
+- Cargo Atual: Coordenador de TI - Secretaria de Saúde de Campo Limpo Paulista  
+- Formação: CST Defesa Cibernética - FATEC Jundiaí (2025-2028)  
+- Background: Infraestrutura · Redes · Suporte · Docência em TI  
+- Experiência: +2 anos em infraestrutura no setor público  
+- Objetivo: Analista de Segurança da Informação / Defesa Cibernética  
+- Diferencial: Sei como redes funcionam — sei como podem ser comprometidas  
 
 ---
 
-## 🏆 Certificações
+## $ experiencias.log
 
-- ☁️ AWS Academy Cloud Foundations — Amazon Web Services  
-- 🛡️ Princípios da Ciber Segurança — DIO  
-- 🖥️ Técnico em Análise e Desenvolvimento de Sistemas — ETEC  
-- 🎓 CST Defesa Cibernética — FATEC Jundiaí *(em andamento)*  
+**[abr/2025 - atual] Coordenador de TI**  
+Secretaria de Saúde · Campo Limpo Paulista  
+- Gestão de infraestrutura, sistemas e segurança de dados  
 
----
+**[ago/2023 - ago/2025] Responsável por Infraestrutura de TI**  
+Prefeitura Municipal de Campo Limpo Paulista  
+- Configuração de roteadores, switches, redes Wi-Fi  
+- Suporte remoto/presencial e gestão de ativos  
 
-## 🗂️ Projetos
-
-- **lab-infra-sec** — Ambiente corporativo simulado com AD e hardening  
-- **ctf-writeups** — Write-ups de CTFs (TryHackMe)  
-- **it-automation-scripts** — Automação de tarefas de infraestrutura  
-- **vuln-reports** — Relatórios técnicos de vulnerabilidades  
-
----
-
-## 🗺️ Roadmap
-
-**Base de TI — Concluído**
-- Infraestrutura de redes  
-- Windows Server e AD  
-- AWS Cloud Foundations  
-
-**Segurança da Informação — Em progresso**
-- Defesa Cibernética  
-- Kali Linux e Pentest  
-- OWASP Top 10  
-
-**Próximos passos**
-- eJPT  
-- CompTIA Security+  
-- OSCP  
+**[jan/2024 - ago/2025] Professor de Informática**  
+Evolutime · Freelance · Francisco Morato, SP  
+- Currículo, aulas práticas e orientação profissional  
 
 ---
 
-<div align="center">
+## $ skills/
 
-![Visitor Count](https://komarev.com/ghpvc/?username=kamuihs&color=00ff41&style=flat-square&label=Visitantes)
+**Segurança & Infraestrutura**  
+- Windows Server · Redes TCP/IP · Active Directory  
+- Switches & Roteadores · Wi-Fi Analysis  
 
-*"An ounce of prevention is worth a pound of cure."* 🔐  
+**Cloud & Plataformas**  
+- AWS Cloud · Linux · Kali Linux · Suporte Remoto  
 
-**Profissional de TI com olhos em Segurança.  
-Construindo o futuro um commit de cada vez.** 🛡️
+**Dev & Automação**  
+- Python · Bash Script · Git · Office Avançado  
 
-</div>
+**Estudando Agora**  
+- Defesa Cibernética · Metasploit · OWASP Top 10 · Nmap & Recon  
+
+---
+
+## $ certificacoes.txt
+
+- ✅ AWS Academy Cloud Foundations · *Amazon Web Services* (Mar/2024)  
+- ✅ Princípios da Cyber Segurança · *DIO* (Jan/2024)  
+- 🎓 Técnico em Análise e Desenvolvimento de Sistemas · *ETEC Dr. Emílio H. Aguilar* (2019-2020)  
+- 🎓 CST Defesa Cibernética · *FATEC Jundiaí* (2025-2028)  
+
+---
+
+## $ projetos/
+
+**lab-infra-sec**  
+- Rede corporativa simulada (AD, DNS, DHCP) com análise de vulnerabilidades e hardening de Windows Server  
+
+**ctf-writeups**  
+- Documentação de soluções de CTFs no TryHackMe (privilege escalation, web exploitation, análise de redes)  
+
+**it-automation-scripts**  
+- Scripts Python e Bash para automação de TI: inventário de máquinas, monitoramento de rede e backup  
+
+**vuln-reports**  
+- Relatórios técnicos de análise de vulnerabilidades em laboratório (DVWA, Metasploitable2) seguindo metodologia PTES  
+
+---
+
+## $ roadmap.txt
+
+**Base de TI (Concluído)**  
+- Infraestrutura de redes · Windows Server & Active Directory  
+- Suporte técnico · AWS Cloud Foundations  
+- Técnico em ADS  
+
+**Segurança da Informação (Em Progresso)**  
+- CST Defesa Cibernética - FATEC Jundiaí  
+- Kali Linux · OWASP Top 10 · TryHackMe Penetration Testing Path  
+
+**Próximos Objetivos**  
+- Certificação eJPT (eLearnSecurity)  
+- Active Directory Attacks  
+- Certificação OSCP  
+
+---
+
+## $ stats.sh | bash
+
+**GitHub Rank:** A+  
+- Commits · Pull Requests · Issues  
+
+**Top Linguagens**  
+- Python (45%)  
+- Shell/Bash (38%)  
+- PowerShell (17%)  
+
+---
+
+> *"An ounce of prevention is worth a pound of cure."*  
+> Profissional de TI com olhos em Segurança.  
+> Construindo o futuro um commit de cada vez.
