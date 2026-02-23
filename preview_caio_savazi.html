@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub — Caio Gabriel Freitas Savazi</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface2: #1c2128;
+  --border: #30363d;
+  --green: #00ff41;
+  --green-dim: #238636;
+  --green-soft: #56d364;
+  --text: #e6edf3;
+  --muted: #7d8590;
+  --blue: #58a6ff;
+  --orange: #f0883e;
+  --yellow: #d29922;
+  --red: #f85149;
+  --purple: #bc8cff;
+  --aws: #FF9900;
+}
+
+body {
+  background: #010409;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text);
+  min-height: 100vh;
+  padding: 24px 16px;
+}
+
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+/* Top bar */
+.topbar {
+  background: #161b22;
+  border: 1px solid var(--border);
+  border-radius: 10px 10px 0 0;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.topbar-logo { font-size: 22px; color: var(--text); }
+.topbar-tabs { display: flex; gap: 4px; }
+.tab {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: var(--muted);
+  font-family: 'Syne', sans-serif;
+  cursor: pointer;
+  transition: all .2s;
+}
+.tab:hover { color: var(--text); background: #21262d; }
+.tab.active { color: var(--text); background: #21262d; }
+.topbar-right { margin-left: auto; display:flex; align-items:center; gap:8px; }
+.avatar-tiny {
+  width: 28px; height: 28px; border-radius:50%;
+  background: linear-gradient(135deg, #0d2137, #1a3a1a);
+  display:flex; align-items:center; justify-content:center;
+  font-size:14px; border: 1px solid var(--border);
+}
+
+/* Layout */
+.layout {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+/* ─── SIDEBAR ─── */
+.sidebar {
+  padding: 20px 16px;
+  border-right: 1px solid var(--border);
+}
+
+.avatar-wrap { position:relative; margin-bottom:14px; }
+.avatar {
+  width: 248px; height: 248px; border-radius:50%;
+  background: radial-gradient(circle at 35% 30%, #0d2a1a 0%, #0a1628 50%, #0d1117 100%);
+  border: 2px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  font-size:72px; position:relative; overflow:hidden;
+  box-shadow: 0 0 40px rgba(0,255,65,0.08);
+}
+.avatar::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 40% 35%, rgba(0,255,65,0.12) 0%, transparent 65%);
+}
+.avatar-emoji { position:relative; z-index:1; filter:drop-shadow(0 0 16px rgba(0,255,65,0.4)); }
+
+.online-badge {
+  position:absolute; bottom:10px; right:10px;
+  background:#1a3a1a; border:2px solid var(--bg);
+  border-radius:20px; padding:3px 10px;
+  font-size:11px; color:var(--green-soft);
+  font-family:'Syne',sans-serif; font-weight:600;
+  display:flex; align-items:center; gap:5px;
+}
+.dot { width:7px; height:7px; border-radius:50%; background:var(--green-soft); animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.4;} }
+
+.name { font-size:20px; font-weight:800; color:var(--text); font-family:'Syne',sans-serif; line-height:1.2; margin-bottom:2px; }
+.username { font-size:14px; color:var(--muted); margin-bottom:10px; font-family:'Syne',sans-serif; }
+.headline {
+  font-size:12px; color:var(--text); line-height:1.5;
+  margin-bottom:14px; font-family:'Syne',sans-serif;
+  padding: 8px 10px; background:var(--surface2);
+  border-left:3px solid var(--green); border-radius:0 4px 4px 0;
+}
+
+.btn-contact {
+  width:100%; background:var(--green-dim);
+  border:1px solid rgba(240,246,252,.1);
+  color:#fff; padding:6px 16px; border-radius:6px;
+  font-size:13px; font-family:'Syne',sans-serif;
+  font-weight:700; cursor:pointer; margin-bottom:14px;
+  transition:all .2s; letter-spacing:.3px;
+}
+.btn-contact:hover { background:#2ea043; transform:translateY(-1px); }
+
+.meta { display:flex; flex-direction:column; gap:7px; margin-bottom:16px; }
+.meta-row {
+  display:flex; align-items:center; gap:8px;
+  font-size:12px; color:var(--muted); font-family:'Syne',sans-serif;
+}
+.meta-icon { font-size:13px; flex-shrink:0; }
+.meta-link { color:var(--blue); text-decoration:none; }
+.meta-link:hover { text-decoration:underline; }
+
+.section-label {
+  font-size:12px; font-weight:700; color:var(--text);
+  font-family:'Syne',sans-serif; margin-bottom:8px;
+  padding-top:14px; border-top:1px solid var(--border);
+  letter-spacing:.5px; text-transform:uppercase;
+}
+
+.tag-cloud { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:14px; }
+.tag {
+  border-radius:999px; padding:3px 10px;
+  font-size:11px; font-family:'Syne',sans-serif; font-weight:600;
+}
+.tag-green  { background:#1a3a1a; color:#56d364; border:1px solid #238636; }
+.tag-blue   { background:#1f3a5f; color:#79c0ff; border:1px solid #1f6feb; }
+.tag-orange { background:#3d1f00; color:#f0883e; border:1px solid #9e4500; }
+.tag-aws    { background:#2d1e00; color:#FF9900; border:1px solid #FF9900; }
+.tag-purple { background:#2d1f4a; color:#bc8cff; border:1px solid #6e40c9; }
+
+/* Experience compact */
+.exp-list { display:flex; flex-direction:column; gap:8px; }
+.exp-item {
+  background:var(--surface2); border:1px solid var(--border);
+  border-radius:6px; padding:8px 10px;
+}
+.exp-title { font-size:11px; font-weight:700; color:var(--text); font-family:'Syne',sans-serif; }
+.exp-company { font-size:11px; color:var(--blue); font-family:'Syne',sans-serif; }
+.exp-period { font-size:10px; color:var(--muted); font-family:'Syne',sans-serif; margin-top:2px; }
+
+/* Certs compact */
+.cert-list { display:flex; flex-direction:column; gap:5px; margin-bottom:14px; }
+.cert-item { display:flex; align-items:center; gap:6px; font-size:11px; font-family:'Syne',sans-serif; }
+.cert-check { color:var(--green-soft); font-size:12px; flex-shrink:0; }
+.cert-wip   { color:var(--yellow); font-size:12px; flex-shrink:0; }
+.cert-name  { color:var(--text); }
+.cert-issuer { color:var(--muted); }
+
+/* Contrib graph */
+.contrib-wrap { padding:10px; background:var(--surface2); border-radius:6px; border:1px solid var(--border); }
+.contrib-title { font-size:11px; color:var(--muted); font-family:'Syne',sans-serif; margin-bottom:6px; }
+.contrib-grid { display:grid; grid-template-columns:repeat(53,1fr); gap:2px; }
+.cell { aspect-ratio:1; border-radius:2px; background:#21262d; }
+.l1{background:#0e4429;} .l2{background:#006d32;} .l3{background:#26a641;} .l4{background:#39d353;}
+
+/* ─── MAIN ─── */
+.main { padding:24px; }
+
+/* README card */
+.readme-card { border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+.readme-bar {
+  background:var(--surface); border-bottom:1px solid var(--border);
+  padding:8px 14px; display:flex; align-items:center; gap:8px;
+  font-size:12px; color:var(--muted); font-family:'Syne',sans-serif;
+}
+.readme-bar strong { color:var(--text); }
+.readme-body { padding:28px; background:var(--bg); }
+
+/* ASCII */
+.ascii {
+  color:var(--green); font-size:9px; line-height:1.25;
+  text-align:center; margin-bottom:20px; letter-spacing:0;
+  text-shadow:0 0 12px rgba(0,255,65,.5);
+  animation:flicker 5s infinite;
+}
+@keyframes flicker { 0%,94%,100%{opacity:1;} 95%{opacity:.7;} 97%{opacity:.9;} 98%{opacity:.6;} }
+
+.r-center { text-align:center; }
+.r-label { font-size:11px; letter-spacing:3px; color:var(--muted); text-transform:uppercase; margin-bottom:4px; font-family:'Syne',sans-serif; }
+.r-tagline { font-size:17px; font-weight:800; color:var(--text); font-family:'Syne',sans-serif; margin-bottom:4px; }
+.r-sub { font-size:12px; color:var(--muted); font-family:'Syne',sans-serif; margin-bottom:16px; }
+
+.badges { display:flex; flex-wrap:wrap; gap:7px; justify-content:center; margin-bottom:8px; }
+.badge {
+  padding:5px 12px; border-radius:6px; font-size:11px;
+  font-family:'Syne',sans-serif; font-weight:700;
+  display:flex; align-items:center; gap:5px;
+  cursor:pointer; transition:all .2s;
+}
+.badge:hover { transform:translateY(-2px); opacity:.85; }
+.b-li   { background:#0a66c2; color:#fff; }
+.b-aws  { background:#232f3e; color:#FF9900; border:1px solid #FF9900; }
+.b-mail { background:#ea4335; color:#fff; }
+.b-avail{ background:#1a3a1a; color:#56d364; border:1px solid #238636; }
+.b-loc  { background:#21262d; color:var(--muted); border:1px solid var(--border); }
+
+hr.divider { border:none; border-top:1px solid var(--border); margin:22px 0; }
+
+.cmd { font-size:13px; font-weight:700; color:var(--green); margin-bottom:12px; display:flex; align-items:center; gap:6px; }
+
+/* Terminal */
+.terminal {
+  background:#010409; border:1px solid var(--border);
+  border-radius:8px; padding:16px; font-size:11.5px;
+  line-height:1.9; margin-bottom:16px; position:relative;
+  box-shadow:inset 0 0 40px rgba(0,255,65,.02);
+}
+.terminal::before {
+  content:'● ● ●'; position:absolute; top:9px; left:12px;
+  font-size:10px; color:var(--muted); letter-spacing:4px;
+}
+.tc { margin-top:22px; }
+.t-prompt { color:var(--green); }
+.t-cmd    { color:var(--text); }
+.t-key    { color:var(--yellow); }
+.t-val    { color:var(--text); }
+.t-dot    { color:var(--muted); }
+.t-arr    { color:var(--green-soft); }
+.t-com    { color:var(--muted); font-style:italic; }
+
+/* Skills */
+.skill-group { margin-bottom:12px; }
+.skill-cat { font-size:11px; font-weight:700; color:var(--muted); font-family:'Syne',sans-serif; margin-bottom:6px; text-transform:uppercase; letter-spacing:.5px; }
+.skill-pills { display:flex; flex-wrap:wrap; gap:6px; }
+.pill {
+  padding:5px 11px; border-radius:6px; font-size:11px;
+  font-family:'Syne',sans-serif; font-weight:600;
+  display:flex; align-items:center; gap:5px;
+}
+.p-sec   { background:#1a2a3a; color:#79c0ff; border:1px solid #1f6feb; }
+.p-win   { background:#1a1f3a; color:#79c0ff; }
+.p-aws   { background:#2d1e00; color:#FF9900; }
+.p-bash  { background:#1a2a1a; color:#56d364; }
+.p-red   { background:#3a1a1a; color:#f0883e; }
+.p-gray  { background:#21262d; color:#e6edf3; }
+.p-study { background:#2d1f4a; color:#bc8cff; }
+
+/* Certs table */
+.cert-tbl { width:100%; border-collapse:collapse; font-size:12px; margin-bottom:16px; font-family:'Syne',sans-serif; }
+.cert-tbl th { background:var(--surface); color:var(--muted); padding:8px 12px; text-align:left; border-bottom:1px solid var(--border); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.5px; }
+.cert-tbl td { padding:9px 12px; border-bottom:1px solid #21262d; color:var(--text); }
+.cert-tbl tr:last-child td { border-bottom:none; }
+.cert-tbl tr:hover td { background:var(--surface); }
+.s-done { color:#56d364; font-weight:700; }
+.s-wip  { color:var(--yellow); font-weight:700; }
+.s-plan { color:var(--muted); }
+
+/* Projects */
+.proj-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px; }
+.proj-card {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:8px; padding:16px;
+  transition:all .25s; cursor:pointer; position:relative; overflow:hidden;
+}
+.proj-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, var(--green), transparent);
+  opacity:0; transition:opacity .25s;
+}
+.proj-card:hover { border-color:var(--green); transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,255,65,.06); }
+.proj-card:hover::before { opacity:1; }
+.proj-icon { font-size:22px; margin-bottom:8px; }
+.proj-name { color:var(--blue); font-size:13px; font-weight:700; font-family:'Syne',sans-serif; margin-bottom:5px; }
+.proj-desc { color:var(--muted); font-size:11px; line-height:1.5; font-family:'Syne',sans-serif; margin-bottom:10px; }
+.proj-tags { display:flex; flex-wrap:wrap; gap:4px; }
+.ptag { background:#1f3a5f; color:#79c0ff; border-radius:999px; padding:2px 8px; font-size:10px; font-family:'Syne',sans-serif; }
+
+/* Roadmap */
+.roadmap {
+  background:#010409; border:1px solid var(--border);
+  border-radius:8px; padding:16px 20px;
+  font-size:12px; line-height:2.1; margin-bottom:16px;
+}
+.r-done { color:#56d364; }
+.r-wip  { color:var(--yellow); }
+.r-next { color:var(--muted); }
+.r-section { color:var(--text); font-weight:700; font-family:'Syne',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:1px; margin-top:8px; }
+
+/* Stats */
+.stats { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px; }
+.stat-card {
+  background:#010409; border:1px solid var(--border);
+  border-radius:8px; padding:16px;
+}
+.stat-head { font-size:11px; color:var(--muted); font-family:'Syne',sans-serif; margin-bottom:10px; text-transform:uppercase; letter-spacing:.5px; }
+.stat-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; font-size:11px; font-family:'Syne',sans-serif; }
+.stat-bar { height:3px; background:#21262d; border-radius:2px; margin-top:3px; overflow:hidden; }
+.stat-fill { height:100%; background:linear-gradient(90deg, var(--green), #00cc33); border-radius:2px; animation:grow 1.8s ease-out forwards; width:0; }
+@keyframes grow { to { width:var(--w); } }
+.rank-badge { font-size:28px; font-weight:800; color:var(--green); font-family:'Syne',sans-serif; text-align:center; padding:8px 0; text-shadow:0 0 20px rgba(0,255,65,.3); }
+.rank-label { font-size:10px; color:var(--muted); font-family:'Syne',sans-serif; text-align:center; }
+
+.lang-row { display:flex; align-items:center; gap:8px; margin-bottom:7px; font-size:11px; font-family:'Syne',sans-serif; }
+.lang-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+.lang-name { color:var(--text); flex:1; }
+.lang-pct { color:var(--muted); }
+
+/* Footer */
+.readme-footer {
+  text-align:center; padding-top:18px;
+  border-top:1px solid var(--border);
+}
+.visitor { display:inline-block; background:#010409; border:1px solid var(--green); color:var(--green); padding:3px 14px; border-radius:4px; font-size:11px; margin-bottom:10px; font-family:'JetBrains Mono',monospace; }
+.quote { color:var(--muted); font-style:italic; margin-bottom:8px; font-size:12px; }
+.footer-cta { font-size:13px; font-weight:700; color:var(--green-soft); font-family:'Syne',sans-serif; }
+
+/* Floating hint */
+.hint {
+  position:fixed; bottom:24px; right:24px;
+  background:linear-gradient(135deg, var(--green), #00cc33);
+  color:#000; padding:10px 16px; border-radius:8px;
+  font-size:12px; font-family:'Syne',sans-serif; font-weight:800;
+  box-shadow:0 4px 20px rgba(0,255,65,.35);
+  animation:float 3s ease-in-out infinite;
+  cursor:pointer; z-index:100;
+}
+@keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-6px);} }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <span class="topbar-logo">⌬</span>
+    <div class="topbar-tabs">
+      <div class="tab">Pull requests</div>
+      <div class="tab">Issues</div>
+      <div class="tab active">Profile</div>
+      <div class="tab">Explore</div>
+    </div>
+    <div class="topbar-right">
+      <div class="avatar-tiny">🔐</div>
+    </div>
+  </div>
+
+  <div class="layout">
+
+    <!-- ── SIDEBAR ── -->
+    <div class="sidebar">
+
+      <div class="avatar-wrap">
+        <div class="avatar"><span class="avatar-emoji">🛡️</span></div>
+        <div class="online-badge"><div class="dot"></div>Disponível</div>
+      </div>
+
+      <div class="name">Caio Gabriel<br>Freitas Savazi</div>
+      <div class="username">caio-savazi</div>
+      <div class="headline">Segurança da Informação · Infraestrutura de TI · Defesa Cibernética — FATEC Jundiaí</div>
+
+      <button class="btn-contact">✉ &nbsp;Entrar em contato</button>
+
+      <div class="meta">
+        <div class="meta-row"><span class="meta-icon">🏢</span>Secretaria de Saúde — Campo Limpo Paulista</div>
+        <div class="meta-row"><span class="meta-icon">🎓</span>FATEC Jundiaí · CST Defesa Cibernética</div>
+        <div class="meta-row"><span class="meta-icon">📍</span>Campo Limpo Paulista, SP — Brasil</div>
+        <div class="meta-row"><span class="meta-icon">🔗</span><a class="meta-link">linkedin.com/in/caio-savazi</a></div>
+      </div>
+
+      <div class="section-label">⚔️ Especialidades</div>
+      <div class="tag-cloud">
+        <span class="tag tag-blue">Windows Server</span>
+        <span class="tag tag-green">Kali Linux</span>
+        <span class="tag tag-blue">Redes TCP/IP</span>
+        <span class="tag tag-orange">Metasploit</span>
+        <span class="tag tag-aws">AWS Cloud</span>
+        <span class="tag tag-green">Bash</span>
+        <span class="tag tag-blue">Active Directory</span>
+        <span class="tag tag-purple">Defesa Cibernética</span>
+        <span class="tag tag-orange">Suporte Técnico</span>
+      </div>
+
+      <div class="section-label">💼 Experiência</div>
+      <div class="exp-list">
+        <div class="exp-item">
+          <div class="exp-title">Coordenador de TI</div>
+          <div class="exp-company">Secretaria de Saúde · CLP</div>
+          <div class="exp-period">abr/2025 → atual · 11 meses</div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-title">Responsável por Infraestrutura de TI</div>
+          <div class="exp-company">Prefeitura Municipal de CLP</div>
+          <div class="exp-period">ago/2023 → ago/2025 · 2 anos</div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-title">Professor de Informática</div>
+          <div class="exp-company">Evolutime · Freelance</div>
+          <div class="exp-period">jan/2024 → ago/2025 · 1a 8m</div>
+        </div>
+      </div>
+
+      <div class="section-label">🏆 Certificações</div>
+      <div class="cert-list">
+        <div class="cert-item"><span class="cert-check">✅</span><span class="cert-name">AWS Cloud Foundations</span></div>
+        <div class="cert-item"><span class="cert-check">✅</span><span class="cert-name">Princípios Cyber Seg. · DIO</span></div>
+        <div class="cert-item"><span class="cert-check">✅</span><span class="cert-name">Técnico ADS · ETEC</span></div>
+        <div class="cert-item"><span class="cert-wip">🔄</span><span class="cert-name">CST Defesa Cibernética · FATEC</span></div>
+      </div>
+
+      <div class="contrib-wrap">
+        <div class="contrib-title">Contribuições este ano</div>
+        <div class="contrib-grid" id="cg"></div>
+      </div>
+
+    </div>
+
+    <!-- ── MAIN README ── -->
+    <div class="main">
+      <div class="readme-card">
+        <div class="readme-bar">
+          📄 <strong>caio-savazi / README.md</strong>
+        </div>
+        <div class="readme-body">
+
+          <div class="ascii">
+██████╗ █████╗ ██╗ ██████╗      ██████╗  █████╗ ██████╗ ██████╗ ██╗███████╗██╗<br>
+██╔════╝██╔══██╗██║██╔═══██╗    ██╔════╝ ██╔══██╗██╔══██╗██╔══██╗██║██╔════╝██║<br>
+██║     ███████║██║██║   ██║    ██║  ███╗███████║██████╔╝██████╔╝██║█████╗  ██║<br>
+██║     ██╔══██║██║██║   ██║    ██║   ██║██╔══██║██╔══██╗██╔══██╗██║██╔══╝  ██║<br>
+╚██████╗██║  ██║██║╚██████╔╝    ╚██████╔╝██║  ██║██████╔╝██║  ██║██║███████╗███████╗<br>
+ ╚═════╝╚═╝  ╚═╝╚═╝ ╚═════╝      ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+          </div>
+
+          <div class="r-center">
+            <div class="r-label">$ whoami</div>
+            <div class="r-tagline">Coordenador de TI · Segurança da Informação · Defesa Cibernética</div>
+            <div class="r-sub">+2 anos em infraestrutura no setor público · FATEC Jundiaí · Campo Limpo Paulista, SP 🇧🇷</div>
+            <div class="badges">
+              <a class="badge b-li">in LinkedIn</a>
+              <a class="badge b-mail">✉ Email</a>
+              <a class="badge b-aws">☁ AWS Certified</a>
+              <a class="badge b-avail">🟢 Disponível para contratação</a>
+              <a class="badge b-loc">📍 Campo Limpo Paulista, SP</a>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <!-- Sobre mim -->
+          <div class="cmd">$ cat sobre_mim.txt</div>
+          <div class="terminal">
+            <div class="tc">
+              <div><span class="t-prompt">┌──(caio-savazi㉿sec-ops)-[~]</span></div>
+              <div><span class="t-prompt">└─$ </span><span class="t-cmd">cat sobre_mim.txt</span></div>
+              <br>
+              <div><span class="t-key">  Cargo Atual </span><span class="t-dot">: </span><span class="t-val">Coordenador de TI — Sec. de Saúde de Campo Limpo Paulista</span></div>
+              <div><span class="t-key">  Formação    </span><span class="t-dot">: </span><span class="t-val">CST Defesa Cibernética — FATEC Jundiaí (2025–2028)</span></div>
+              <div><span class="t-key">  Background  </span><span class="t-dot">: </span><span class="t-val">Infraestrutura · Redes · Suporte · Docência em TI</span></div>
+              <div><span class="t-key">  Experiência </span><span class="t-dot">: </span><span class="t-val">+2 anos em infraestrutura no setor público</span></div>
+              <div><span class="t-key">  Objetivo    </span><span class="t-dot">: </span><span class="t-arr">↳ </span><span class="t-val">Analista de Segurança da Informação / Defesa Cibernética</span></div>
+              <div><span class="t-key">  Diferencial </span><span class="t-dot">: </span><span class="t-val">Sei como redes funcionam — sei como podem ser comprometidas</span></div>
+              <div><span class="t-key">  Local       </span><span class="t-dot">: </span><span class="t-val">Campo Limpo Paulista, SP — Brasil 🇧🇷</span></div>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <!-- Experiência -->
+          <div class="cmd">$ cat experiencias.log</div>
+          <div class="terminal">
+            <div class="tc">
+              <div><span class="t-prompt">┌──(caio-savazi㉿sec-ops)-[~/carreira]</span></div>
+              <div><span class="t-prompt">└─$ </span><span class="t-cmd">cat experiencias.log</span></div>
+              <br>
+              <div><span class="t-arr">  [abr/2025 → atual] </span><span class="t-key"> Coordenador de TI</span></div>
+              <div><span class="t-dot">                      Secretaria de Saúde · Campo Limpo Paulista</span></div>
+              <div><span class="t-com">                      ► Gestão de infraestrutura, sistemas e segurança de dados</span></div>
+              <br>
+              <div><span class="t-arr">  [ago/2023 → ago/2025] </span><span class="t-key">Responsável por Infraestrutura de TI</span></div>
+              <div><span class="t-dot">                         Prefeitura Municipal de Campo Limpo Paulista</span></div>
+              <div><span class="t-com">                         ► Config. roteadores, switches, redes Wi-Fi</span></div>
+              <div><span class="t-com">                         ► Suporte remoto/presencial e gestão de ativos</span></div>
+              <br>
+              <div><span class="t-arr">  [jan/2024 → ago/2025] </span><span class="t-key">Professor de Informática</span></div>
+              <div><span class="t-dot">                         Evolutime · Freelance · Francisco Morato, SP</span></div>
+              <div><span class="t-com">                         ► Currículo, aulas práticas e orientação profissional</span></div>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <!-- Skills -->
+          <div class="cmd">$ ls skills/ --all</div>
+
+          <div class="skill-group">
+            <div class="skill-cat">🛡️ Segurança & Infraestrutura</div>
+            <div class="skill-pills">
+              <span class="pill p-sec">🖥 Windows Server</span>
+              <span class="pill p-sec">🌐 Redes TCP/IP</span>
+              <span class="pill p-win">🔀 Active Directory</span>
+              <span class="pill p-sec">📡 Switches & Roteadores</span>
+              <span class="pill p-sec">📶 Wi-Fi Analysis</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">☁️ Cloud & Plataformas</div>
+            <div class="skill-pills">
+              <span class="pill p-aws">☁ AWS Cloud</span>
+              <span class="pill p-gray">🐧 Linux</span>
+              <span class="pill p-red">🐉 Kali Linux</span>
+              <span class="pill p-gray">🔧 Suporte Remoto</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">💻 Dev & Automação</div>
+            <div class="skill-pills">
+              <span class="pill p-sec">🐍 Python</span>
+              <span class="pill p-bash">$ Bash Script</span>
+              <span class="pill p-gray">📊 Office Avançado</span>
+              <span class="pill p-gray">🔀 Git</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">📚 Estudando agora</div>
+            <div class="skill-pills">
+              <span class="pill p-study">🛡 Defesa Cibernética · FATEC</span>
+              <span class="pill p-red">💥 Metasploit</span>
+              <span class="pill p-study">🌐 OWASP Top 10</span>
+              <span class="pill p-red">🗺 Nmap & Recon</span>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <!-- Certs -->
+          <div class="cmd">$ cat certificacoes.txt</div>
+          <table class="cert-tbl">
+            <tr>
+              <th>Badge</th><th>Certificação</th><th>Emissor</th><th>Status</th>
+            </tr>
+            <tr>
+              <td>☁️</td>
+              <td><strong>AWS Academy Cloud Foundations</strong></td>
+              <td>Amazon Web Services</td>
+              <td><span class="s-done">✅ Mar/2024</span></td>
+            </tr>
+            <tr>
+              <td>🛡️</td>
+              <td><strong>Princípios da Cyber Segurança</strong></td>
+              <td>DIO</td>
+              <td><span class="s-done">✅ Jan/2024</span></td>
+            </tr>
+            <tr>
+              <td>🖥️</td>
+              <td><strong>Técnico em Análise e Desenvolvimento</strong></td>
+              <td>ETEC Dr. Emílio H. Aguilar</td>
+              <td><span class="s-done">✅ 2019–2020</span></td>
+            </tr>
+            <tr>
+              <td>🎓</td>
+              <td><strong>CST Defesa Cibernética</strong></td>
+              <td>FATEC Jundiaí</td>
+              <td><span class="s-wip">🔄 2025–2028</span></td>
+            </tr>
+            <tr>
+              <td>🎯</td>
+              <td><strong>eJPT · CompTIA Security+ · OSCP</strong></td>
+              <td>Próximos objetivos</td>
+              <td><span class="s-plan">⏳ Planejado</span></td>
+            </tr>
+          </table>
+
+          <hr class="divider">
+
+          <!-- Projetos -->
+          <div class="cmd">$ ls -la projetos/</div>
+          <div class="proj-grid">
+            <div class="proj-card">
+              <div class="proj-icon">🏢</div>
+              <div class="proj-name">lab-infra-sec</div>
+              <div class="proj-desc">Rede corporativa simulada (AD, DNS, DHCP) com análise de vulnerabilidades e hardening de Windows Server — baseado na experiência real do setor público.</div>
+              <div class="proj-tags">
+                <span class="ptag">Windows Server</span>
+                <span class="ptag">Active Directory</span>
+                <span class="ptag">Kali Linux</span>
+              </div>
+            </div>
+            <div class="proj-card">
+              <div class="proj-icon">🕸️</div>
+              <div class="proj-name">ctf-writeups</div>
+              <div class="proj-desc">Documentação das soluções de CTFs no TryHackMe — privilege escalation, web exploitation e análise de redes.</div>
+              <div class="proj-tags">
+                <span class="ptag">TryHackMe</span>
+                <span class="ptag">Pentest</span>
+                <span class="ptag">Linux</span>
+              </div>
+            </div>
+            <div class="proj-card">
+              <div class="proj-icon">🐍</div>
+              <div class="proj-name">it-automation-scripts</div>
+              <div class="proj-desc">Scripts Python e Bash para automação de TI: inventário de máquinas, monitoramento de rede e backup — criados a partir de necessidades reais na Prefeitura.</div>
+              <div class="proj-tags">
+                <span class="ptag">Python</span>
+                <span class="ptag">Bash</span>
+                <span class="ptag">Automação</span>
+              </div>
+            </div>
+            <div class="proj-card">
+              <div class="proj-icon">📋</div>
+              <div class="proj-name">vuln-reports</div>
+              <div class="proj-desc">Relatórios técnicos de análise de vulnerabilidades em laboratório (DVWA, Metasploitable2) seguindo metodologia PTES.</div>
+              <div class="proj-tags">
+                <span class="ptag">OpenVAS</span>
+                <span class="ptag">Burp Suite</span>
+                <span class="ptag">Metasploit</span>
+              </div>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <!-- Roadmap -->
+          <div class="cmd">$ cat roadmap.txt</div>
+          <div class="roadmap">
+            <div class="r-section">▸ BASE DE TI (concluído)</div>
+            <div class="r-done">[✅] Infraestrutura de redes (roteadores, switches, Wi-Fi)</div>
+            <div class="r-done">[✅] Windows Server e Active Directory</div>
+            <div class="r-done">[✅] Suporte técnico e gestão de ambientes corporativos</div>
+            <div class="r-done">[✅] AWS Cloud Foundations</div>
+            <div class="r-done">[✅] Técnico em Análise e Desenvolvimento de Sistemas</div>
+            <div class="r-section">▸ SEGURANÇA DA INFORMAÇÃO (em progresso)</div>
+            <div class="r-wip">[🔄] CST Defesa Cibernética — FATEC Jundiaí</div>
+            <div class="r-wip">[🔄] Kali Linux e ferramentas de pentest</div>
+            <div class="r-wip">[🔄] OWASP Top 10 e testes web</div>
+            <div class="r-wip">[🔄] TryHackMe — Penetration Testing Path</div>
+            <div class="r-section">▸ PRÓXIMOS OBJETIVOS</div>
+            <div class="r-next">[⏳] Certificação eJPT (eLearnSecurity)</div>
+            <div class="r-next">[⏳] CompTIA Security+</div>
+            <div class="r-next">[⏳] Active Directory Attacks</div>
+            <div class="r-next">[⏳] Certificação OSCP</div>
+          </div>
+
+          <hr class="divider">
+
+          <!-- Stats -->
+          <div class="cmd">$ cat stats.sh | bash</div>
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-head">GitHub Rank</div>
+              <div class="rank-badge">A+</div>
+              <div class="rank-label">rank de contribuições</div>
+              <br>
+              <div style="font-size:11px;color:var(--muted);font-family:'Syne',sans-serif;">
+                <div class="stat-row"><span>Commits</span><span style="color:var(--green-soft)">▓▓▓▓▓░░</span></div>
+                <div class="stat-row"><span>Pull Requests</span><span style="color:var(--blue)">▓▓▓░░░░</span></div>
+                <div class="stat-row"><span>Issues</span><span style="color:var(--yellow)">▓▓░░░░░</span></div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-head">Top Linguagens</div>
+              <div class="lang-row"><div class="lang-dot" style="background:#3572A5"></div><span class="lang-name">Python</span><span class="lang-pct">45%</span></div>
+              <div class="stat-bar"><div class="stat-fill" style="--w:45%"></div></div>
+              <div class="lang-row"><div class="lang-dot" style="background:#89e051"></div><span class="lang-name">Shell / Bash</span><span class="lang-pct">38%</span></div>
+              <div class="stat-bar"><div class="stat-fill" style="--w:38%"></div></div>
+              <div class="lang-row"><div class="lang-dot" style="background:#384d54"></div><span class="lang-name">PowerShell</span><span class="lang-pct">17%</span></div>
+              <div class="stat-bar"><div class="stat-fill" style="--w:17%"></div></div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="readme-footer">
+            <div class="visitor">👁 Visitantes do perfil: carregando...</div>
+            <div class="quote">"An ounce of prevention is worth a pound of cure." — em TI e em segurança. 🔐</div>
+            <div class="footer-cta">Profissional de TI com olhos em Segurança. Construindo o futuro um commit de cada vez. 🛡️</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="hint" onclick="this.style.display='none'">📋 README.md pronto para copiar!</div>
+
+<script>
+  // Contribution graph
+  const g = document.getElementById('cg');
+  for(let i=0;i<53*5;i++){
+    const c=document.createElement('div');
+    const r=Math.random();
+    let cls='cell';
+    if(r>.78) cls+=' l'+[1,1,2,2,3,4][Math.floor(Math.random()*6)];
+    c.className=cls; g.appendChild(c);
+  }
+</script>
+</body>
+</html>
