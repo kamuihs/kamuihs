@@ -16,7 +16,7 @@ Experiência real em infraestrutura de redes, suporte técnico e gestão de TI n
 Atualmente cursando **Defesa Cibernética na FATEC Jundiaí** 🎓
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Caio_Savazi-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/caio-gabriel-freitas-savazi-5b16a72a8)
-[![Email](https://img.shields.io/badge/Email-Contato-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:seuemail@email.com)
+[![Email](https://img.shields.io/badge/Email-Contato-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:caiogabrielsavazi@gmail.com)
 [![AWS](https://img.shields.io/badge/AWS_Certified-Cloud_Foundations-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com)
 
 ![Disponível para contratação](https://img.shields.io/badge/🟢_Status-Disponível_para_contratação-238636?style=flat-square)
@@ -121,28 +121,28 @@ Acredito que a base sólida em infraestrutura — roteadores, switches, redes ca
 
 ## `$ ls -la projetos/`
 
-### 🔬 [Lab de Infraestrutura Segura](https://github.com/SEU_USUARIO/lab-infra-sec)
+### 🔬 [Lab de Infraestrutura Segura](https://github.com/kamuihs/lab-infra-sec)
 > Ambiente de laboratório simulando rede corporativa (AD, DNS, DHCP) com análise de vulnerabilidades e hardening de sistemas Windows Server.
 
 `Windows Server` `Active Directory` `Kali Linux` `Nmap`
 
 ---
 
-### 🕸️ [CTF Writeups](https://github.com/SEU_USUARIO/ctf-writeups)
+### 🕸️ [CTF Writeups](https://github.com/kamuihs/ctf-writeups)
 > Documentação das soluções de desafios no TryHackMe — foco em privilege escalation, web exploitation e análise de redes.
 
 `TryHackMe` `Pentest` `Linux` `Web Exploitation`
 
 ---
 
-### 🐍 [Scripts de Automação de TI](https://github.com/SEU_USUARIO/it-automation-scripts)
+### 🐍 [Scripts de Automação de TI](https://github.com/kamuihs/it-automation-scripts)
 > Scripts Python e Bash para automação de tarefas repetitivas de infraestrutura: inventário de máquinas, monitoramento de rede e backup automatizado.
 
 `Python` `Bash` `Automação` `Infraestrutura`
 
 ---
 
-### 📋 [Relatórios de Análise de Vulnerabilidades](https://github.com/SEU_USUARIO/vuln-reports)
+### 📋 [Relatórios de Análise de Vulnerabilidades](https://github.com/kamuihs/vuln-reports)
 > Relatórios técnicos de análise de vulnerabilidades produzidos em laboratório (DVWA, VulnHub, Metasploitable2), seguindo metodologia PTES.
 
 `OpenVAS` `Nikto` `Burp Suite` `Metasploit`
@@ -177,11 +177,11 @@ Acredito que a base sólida em infraestrutura — roteadores, switches, redes ca
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SEU_USUARIO&show_icons=true&theme=dark&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&border_color=30363d)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=kamuihs&show_icons=true&theme=dark&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&border_color=30363d)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SEU_USUARIO&layout=compact&theme=dark&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&border_color=30363d)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kamuihs&layout=compact&theme=dark&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&border_color=30363d)
 
-[![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/SEU_USUARIO_THM.png)](https://tryhackme.com/p/SEU_USUARIO_THM)
+[![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/kamuihs.png)](https://tryhackme.com/p/kamuihs)
 
 </div>
 
@@ -207,7 +207,7 @@ Acredito que a base sólida em infraestrutura — roteadores, switches, redes ca
 
 <div align="center">
 
-![Visitor Count](https://komarev.com/ghpvc/?username=SEU_USUARIO&color=00ff41&style=flat-square&label=Visitantes+do+perfil)
+![Visitor Count](https://komarev.com/ghpvc/?username=kamuihs&color=00ff41&style=flat-square&label=Visitantes+do+perfil)
 
 **Profissional de TI com olhos em Segurança. Construindo o futuro um commit de cada vez.** 🛡️
 
