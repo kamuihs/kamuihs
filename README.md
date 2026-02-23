@@ -168,29 +168,18 @@ Acredito que a base sólida em infraestrutura — roteadores, switches, redes ca
 ```
 
 ---
-## 📊 ESTATÍSTICAS & ATIVIDADE
+## 📊 ATIVIDADE & EVOLUÇÃO TÉCNICA
 
-### 📈 GitHub
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=kamuihs&show_icons=true&theme=dark)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kamuihs&layout=compact&theme=dark)
-
----
-
-### 🛡️ TryHackMe
-
-[![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/kamuihs.png)](https://tryhackme.com/p/kamuihs)
----
-
-<div align="center">
-
-📊 **Principais Tecnologias Utilizadas**
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kamuihs&layout=compact&theme=dark&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&border_color=30363d" />
-
-</div>
-</div>
+```text
+┌──────────────────────────────────────────────┐
+│ STATUS PROFISSIONAL                          │
+├──────────────────────────────────────────────┤
+│ Atuação atual        : Coordenador de TI     │
+│ Foco técnico         : Segurança da Informação│
+│ Especialização alvo  : Pentest / Blue Team   │
+│ Nível                : Pleno (Infra) / Jr (Sec)
+└──────────────────────────────────────────────┘
+```
 ---
 
 ## 📫 CONTATO
