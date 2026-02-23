@@ -26,11 +26,9 @@ Atualmente cursando **Defesa Cibernética na FATEC Jundiaí** 🎓
 
 ---
 
-## `$ cat sobre_mim.txt`
+## 🧑‍💻 SOBRE MIM
 
 ```bash
-┌──(caio-savazi㉿sec-ops)-[~]
-└─$ cat sobre_mim.txt
 
   Nome        : Caio Gabriel Freitas Savazi
   Cargo Atual : Coordenador de TI — Secretaria de Saúde de Campo Limpo Paulista
@@ -47,11 +45,9 @@ Acredito que a base sólida em infraestrutura — roteadores, switches, redes ca
 
 ---
 
-## `$ cat experiencias.log`
+## 💼 EXPERIÊNCIA PROFISSIONAL
 
 ```
-┌──(caio-savazi㉿sec-ops)-[~/carreira]
-└─$ cat experiencias.log
 
   [abr/2025 → atual]  Coordenador de TI
                        Secretaria de Saúde · Campo Limpo Paulista, SP
@@ -76,7 +72,7 @@ Acredito que a base sólida em infraestrutura — roteadores, switches, redes ca
 
 ---
 
-## `$ ls skills/ --all`
+## 🛠️ SKILLS & TECNOLOGIAS
 
 ### 🛡️ Segurança & Infraestrutura
 ![Windows Server](https://img.shields.io/badge/Windows_Server-0078D4?style=for-the-badge&logo=windows&logoColor=white)
@@ -104,7 +100,7 @@ Acredito que a base sólida em infraestrutura — roteadores, switches, redes ca
 
 ---
 
-## `$ cat certificacoes.txt`
+## 🎓 CERTIFICAÇÕES
 
 > 🏆 Certificações conquistadas e em andamento
 
@@ -119,7 +115,7 @@ Acredito que a base sólida em infraestrutura — roteadores, switches, redes ca
 
 ---
 
-## `$ ls -la projetos/`
+## 🧪 PROJETOS
 
 ### 🔬 [Lab de Infraestrutura Segura](https://github.com/kamuihs/lab-infra-sec)
 > Ambiente de laboratório simulando rede corporativa (AD, DNS, DHCP) com análise de vulnerabilidades e hardening de sistemas Windows Server.
@@ -149,7 +145,7 @@ Acredito que a base sólida em infraestrutura — roteadores, switches, redes ca
 
 ---
 
-## `$ cat roadmap.txt`
+## 🗺️ ROADMAP DE CARREIRA
 
 ```
  BASE DE TI (concluído)
@@ -172,26 +168,35 @@ Acredito que a base sólida em infraestrutura — roteadores, switches, redes ca
 ```
 
 ---
+## 📊 ESTATÍSTICAS & ATIVIDADE
 
-## `$ cat stats.sh | bash`
+### 📈 GitHub
 
-<div align="center">
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=kamuihs&show_icons=true&theme=dark)
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=kamuihs&show_icons=true&theme=dark&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&border_color=30363d)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kamuihs&layout=compact&theme=dark&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&border_color=30363d)
-
-[![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/kamuihs.png)](https://tryhackme.com/p/kamuihs)
-
-</div>
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kamuihs&layout=compact&theme=dark)
 
 ---
 
-## `$ cat contato.txt`
+### 🛡️ TryHackMe
+
+[![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/kamuihs.png)](https://tryhackme.com/p/kamuihs)
+---
+
+<div align="center">
+
+📊 **Principais Tecnologias Utilizadas**
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kamuihs&layout=compact&theme=dark&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&border_color=30363d" />
+
+</div>
+</div>
+---
+
+## 📫 CONTATO
 
 ```bash
-┌──(caio-savazi㉿sec-ops)-[~]
-└─$ echo "Vamos conversar!"
+   "Vamos conversar!"
 
   💼 LinkedIn  : linkedin.com/in/caio-gabriel-freitas-savazi-5b16a72a8
   📧 Email     : caiogabrielsavazi@gmail.com
