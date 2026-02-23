@@ -257,10 +257,9 @@ Profissional de TI com experiência sólida em **infraestrutura de redes, suport
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=kamuihs&show_icons=true&theme=dark&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&border_color=30363d)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=kamuihs&show_icons=true&theme=dark&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&border_color=30363d&cache_seconds=21600)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kamuihs&layout=compact&theme=dark&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&border_color=30363d)
-
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kamuihs&layout=compact&theme=dark&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&border_color=30363d&cache_seconds=21600)
 </div>
 
 ---
